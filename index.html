@@ -21,7 +21,7 @@
     <!-- Tell iOS not to automatically link certain text strings. -->
     <meta name="color-scheme" content="light" />
     <meta name="supported-color-schemes" content="light" />
-    <title></title>
+    <title>HTML Email Transactional - Shinola</title>
     <!--   The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
@@ -176,17 +176,20 @@
       }
       .button-td-primary:hover,
       .button-a-primary:hover {
-        background: #555555 !important;
-        border-color: #555555 !important;
+        background: #dddddd !important;
+        border-color: #dddddd !important;
       }
 
       /* Media Queries */
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 500px) {
         /* What it does: Adjust typography on small screens to improve readability */
-        .email-container p {
+        /* .email-container p {
           font-size: 17px !important;
-        }
+        } */
       }
+      /* * {
+        outline: 1px solid red;
+      } */
     </style>
     <!-- Progressive Enhancements : END -->
   </head>
@@ -209,7 +212,7 @@
       role="article"
       aria-roledescription="email"
       lang="en"
-      style="width: 100%; background-color: #222222"
+      style="width: 100%; background-color: #ffffff"
     >
       <!--[if mso | IE]>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
@@ -222,14 +225,8 @@
         style="max-height: 0; overflow: hidden; mso-hide: all"
         aria-hidden="true"
       >
-        (Optional) This text will appear in the inbox preview, but not the email
-        body. It can be used to supplement the email subject line or even
-        summarize the email's contents. Extended text preheaders (~490
-        characters) seems like a better UX for anyone using a screenreader or
-        voice-command apps like Siri to dictate the contents of an email. If
-        this text is not included, email clients will automatically populate it
-        using the text (including image alt text) at the start of the email's
-        body.
+        Thank you for your purchase. We are currently processing your order and
+        will email you once your items have shipped.
       </div>
       <!-- Visually Hidden Preheader Text : END -->
 
@@ -257,7 +254,7 @@
             1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
         -->
-      <div style="max-width: 600px; margin: 0 auto" class="email-container">
+      <div style="max-width: 500px; margin: 0 auto" class="email-container">
         <!--[if mso]>
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
             <tr>
@@ -274,14 +271,14 @@
           width="100%"
           style="margin: auto"
         >
-          <!-- Email Header : BEGIN -->
+          <!-- Logo Image : BEGIN -->
           <tr>
-            <td style="padding: 20px 0; text-align: center">
+            <td style="padding: 10px 0 0 0; text-align: center">
               <img
-                src="https://via.placeholder.com/200x50"
-                width="200"
+                src="https://res.cloudinary.com/endersgame/image/upload/v1671211178/shinola/logo_ltwsbn.jpg"
+                width="150"
                 height="50"
-                alt="alt_text"
+                alt="shinola logo"
                 border="0"
                 style="
                   height: auto;
@@ -294,36 +291,160 @@
               />
             </td>
           </tr>
-          <!-- Email Header : END -->
+          <!-- Logo Image : END -->
 
-          <!-- Hero Image, Flush : BEGIN -->
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="15"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- Menu Links : BEGIN -->
           <tr>
             <td style="background-color: #ffffff">
-              <img
-                src="https://via.placeholder.com/1200x600"
-                width="600"
-                height=""
-                alt="alt_text"
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
                 border="0"
+                width="100%"
+              >
+                <tr>
+                  <td
+                    style="
+                      font-family: sans-serif;
+                      font-size: 12px;
+                      line-height: 20px;
+                      color: #555555;
+                      text-transform: uppercase;
+                      text-align: center;
+                    "
+                  >
+                    <p style="margin: 0">
+                      <a href="#" style="color: #555555; margin: 0 2px">
+                        MEN'S
+                      </a>
+                      <a href="#" style="color: #555555; margin: 0 2px">
+                        WOMEN'S
+                      </a>
+                      <a href="#" style="color: #555555; margin: 0 2px">
+                        NEW&nbsp;ARRIVALS
+                      </a>
+                      <a href="#" style="color: #555555; margin: 0 2px">
+                        BEST&nbsp;SELLERS
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Menu Links : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="15"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- Horizontal Line : BEGIN -->
+          <tr>
+            <td style="padding: 0 15px">
+              <hr
                 style="
-                  width: 100%;
-                  max-width: 600px;
-                  height: auto;
-                  background: #dddddd;
-                  font-family: sans-serif;
-                  font-size: 15px;
-                  line-height: 15px;
-                  color: #555555;
-                  margin: auto;
-                  display: block;
+                  border-width: 0;
+                  background: #000000;
+                  color: #000000;
+                  height: 2px;
                 "
-                class="g-img"
               />
             </td>
           </tr>
-          <!-- Hero Image, Flush : END -->
+          <!-- Horizontal Line : END -->
 
-          <!-- 1 Column Text + Button : BEGIN -->
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="20"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- Header - H1 - : BEGIN -->
+          <tr>
+            <td style="background-color: #ffffff">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+              >
+                <tr>
+                  <td style="text-align: center">
+                    <h1
+                      style="
+                        margin: 0;
+                        font-family: sans-serif;
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: #333333;
+                        font-weight: 400;
+                      "
+                    >
+                      Thank You For Your Order
+                    </h1>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Header - H1 - : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="20"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- Horizontal Line : BEGIN -->
+          <tr>
+            <td style="padding: 0 15px">
+              <hr
+                style="
+                  border-width: 0;
+                  background: #000000;
+                  color: #000000;
+                  height: 2px;
+                "
+              />
+            </td>
+          </tr>
+          <!-- Horizontal Line : END -->
+
+          <!-- Paragraphs : BEGIN -->
           <tr>
             <td style="background-color: #ffffff">
               <table
@@ -343,26 +464,532 @@
                       color: #555555;
                     "
                   >
-                    <h1
-                      style="
-                        margin: 0 0 10px 0;
-                        font-family: sans-serif;
-                        font-size: 25px;
-                        line-height: 30px;
-                        color: #333333;
-                        font-weight: normal;
-                      "
-                    >
-                      Praesent laoreet malesuada&nbsp;cursus.
-                    </h1>
                     <p style="margin: 0">
-                      Maecenas sed ante pellentesque, posuere leo id, eleifend
-                      dolor. Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra, per inceptos himenaeos. Praesent laoreet
-                      malesuada cursus. Maecenas scelerisque congue eros eu
-                      posuere. Praesent in felis ut velit pretium lobortis
-                      rhoncus ut&nbsp;erat.
+                      Dear Greg Kimball <br />
+                      <br />
+                      Thank you for your purchase. We are currently processing
+                      your order and will email you once your items have
+                      shipped. <br />
+                      <br />
+                      If you have general questions or need information about
+                      returns and exchanges, please visit our
+                      <strong>
+                        <a
+                          href="#"
+                          style="color: #555555; text-decoration: underline"
+                          >FAQ</a
+                        >
+                      </strong>
+                      or
+                      <strong>
+                        <a
+                          href="#"
+                          style="color: #555555; text-decoration: underline"
+                          >Return Policy</a
+                        >
+                      </strong>
+                      page. You can also call us toll free at +1-844-744-6652.
+                      <br />
+                      <br />
+                      Sincerely, <br />
+                      <br />
+                      Your friends at Shinola
                     </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Paragraphs : END -->
+
+          <!-- Horizontal Line : BEGIN -->
+          <tr>
+            <td style="padding: 0 15px">
+              <hr
+                style="
+                  border-width: 0;
+                  background: #000000;
+                  color: #000000;
+                  height: 2px;
+                "
+              />
+            </td>
+          </tr>
+          <!-- Horizontal Line : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="20"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- Heading -h2- : BEGIN -->
+          <tr>
+            <td style="background-color: #ffffff">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+              >
+                <tr>
+                  <td
+                    style="
+                      padding: 0 20px;
+                      font-family: sans-serif;
+
+                      line-height: 20px;
+                      color: #555555;
+                      font-weight: 600;
+                    "
+                  >
+                    <h2 style="margin: 0; font-size: 14px">
+                      SUMMARY <br /><br />
+                    </h2>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Heading -h2- : END -->
+
+          <!-- 2 Even Columns Paragraphs : BEGIN -->
+          <tr>
+            <td>
+              <table
+                role="presentation"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="100%"
+              >
+                <tr>
+                  <td valign="top" width="30%">
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      width="100%"
+                    >
+                      <!-- Paragraphs : BEGIN -->
+                      <tr>
+                        <td
+                          style="
+                            text-align: left;
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #555555;
+                            padding: 0 20px;
+                            font-weight: 600;
+                          "
+                        >
+                          <p style="margin: 0">
+                            Order&nbsp;Number: <br />
+                            Order&nbsp;Date: <br />
+                            Order&nbsp;Total: <br />
+                            Shipping&nbsp;Method: <br /><br />
+                          </p>
+                        </td>
+                      </tr>
+                      <!-- Paragraphs : END -->
+
+                      <!-- Heading -h3- : BEGIN -->
+                      <tr>
+                        <td
+                          style="
+                            text-align: left;
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #555555;
+                            padding: 0 20px;
+                          "
+                        >
+                          <h3 style="margin: 0">
+                            SHIPPING&nbsp;ADDRESS <br /><br />
+                          </h3>
+                        </td>
+                      </tr>
+                      <!-- Heading -h3- : END -->
+
+                      <!-- Paragraphs : BEGIN -->
+                      <tr>
+                        <td
+                          style="
+                            text-align: left;
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #555555;
+                            padding: 0 20px;
+                          "
+                        >
+                          <p style="margin: 0">
+                            John Doe <br />
+                            123&nbsp;W&nbsp;456&nbsp;Ave Suite 789 <br />
+                            Broomfield,&nbsp;Colorado <br />
+                            80021 <br />
+                            US <br />
+                            1234567890 <br />
+                          </p>
+                        </td>
+                      </tr>
+                      <!-- Paragraphs : END -->
+                    </table>
+                  </td>
+                  <td valign="top" width="70%">
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      width="100%"
+                    >
+                      <!-- Paragraphs : BEGIN -->
+                      <tr>
+                        <td
+                          style="
+                            text-align: left;
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #555555;
+                            padding: 0 20px;
+                            font-weight: 600;
+                            text-align: right;
+                          "
+                        >
+                          <p style="margin: 0">
+                            3610290994 <br />
+                            September 25, 2022 4:04 am <br />
+                            $11.39 <br />
+                            Table Rates - Standard&nbsp;Shipping <br />
+                            <br />
+                          </p>
+                        </td>
+                      </tr>
+                      <!-- Paragraphs : END -->
+
+                      <!-- Heading -h3- : BEGIN -->
+                      <tr>
+                        <td
+                          style="
+                            text-align: left;
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #555555;
+                            padding: 0 20px;
+                            text-align: right;
+                          "
+                        >
+                          <h3 style="margin: 0">
+                            BILLING ADDRESS <br /><br />
+                          </h3>
+                        </td>
+                      </tr>
+                      <!-- Heading -h3- : END -->
+
+                      <!-- Paragraphs : BEGIN -->
+                      <tr>
+                        <td
+                          style="
+                            text-align: left;
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #555555;
+                            padding: 0 20px;
+                            text-align: right;
+                          "
+                        >
+                          <p style="margin: 0">
+                            John Doe <br />
+                            123&nbsp;W&nbsp;456&nbsp;Ave <br />
+                            Suite 789 <br />
+                            Broomfield,&nbsp;Colorado <br />
+                            80021 <br />
+                            US <br />
+                            1234567890 <br />
+                          </p>
+                        </td>
+                      </tr>
+                      <!-- Paragraphs : END -->
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 2 Even Columns Paragraphs : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="50"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- 2 Columns : BEGIN -->
+          <tr>
+            <td style="padding: 0 20px">
+              <table
+                role="presentation"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="100%"
+                style="max-width: 400px; text-align: left"
+              >
+                <tr>
+                  <!-- Column -1- : BEGIN -->
+                  <td valign="top">
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      width="100%"
+                      style="min-width: 200px; max-width: 300px"
+                    >
+                      <tr>
+                        <td>
+                          <img
+                            src="https://res.cloudinary.com/endersgame/image/upload/v1671211178/shinola/rivets_qekhld.gif"
+                            width="130"
+                            height="130"
+                            alt="rivets"
+                            border="0"
+                            style="display: block"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!-- Column -1- : END -->
+
+                  <!-- Column -2- : BEGIN -->
+                  <td valign="top">
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      width="100%"
+                      style="min-width: 100px; max-width: 300px"
+                    >
+                      <tr>
+                        <td
+                          style="
+                            font-family: sans-serif;
+                            font-size: 13px;
+                            line-height: 20px;
+                            color: #555555;
+                            font-weight: 600;
+                            text-align: left;
+                            vertical-align: top;
+                          "
+                        >
+                          <p style="margin: 0">
+                            <a
+                              href="#"
+                              style="text-decoration: underline; color: #555555"
+                              >Additional Rivets (Pack of 3)</a
+                            >
+                          </p>
+                          <p style="margin-top: 30px">
+                            Price: <span style="font-weight: 300">$8.00</span>
+                            <br />
+                            Qty: <span style="font-weight: 300">1</span>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!-- Column -2- : BEGIN -->
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 2 Columns : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="50"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- Horizontal Line : BEGIN -->
+          <tr>
+            <td style="padding: 0 15px">
+              <hr
+                style="
+                  border-width: 0;
+                  background: #000000;
+                  color: #000000;
+                  height: 2px;
+                "
+              />
+            </td>
+          </tr>
+          <!-- Horizontal Line : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="10"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- 2 Columns : BEGIN -->
+          <tr>
+            <td>
+              <table
+                role="presentation"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="100%"
+                style="font-size: 14px"
+              >
+                <tr>
+                  <!-- Column -1- : BEGIN -->
+                  <td valign="top" width="50%">
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      width="100%"
+                    >
+                      <tr>
+                        <td style="padding: 0 0 0 38px; text-align: left">
+                          <p>
+                            Subtotal: <br />
+                            Discount: <br />
+                            Shipping: <br />
+                            Tax: <br />
+                            <strong>Grand Total</strong><br />
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!-- Column -1- : END -->
+
+                  <!-- Column -2- : BEGIN -->
+                  <td valign="top" width="50%">
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      width="100%"
+                    >
+                      <tr>
+                        <td style="padding: 0 38px 0 0; text-align: right">
+                          <p>
+                            $8.00 <br />
+                            $0.00 <br />
+                            $2.95 <br />
+                            $0.44 <br />
+                            $11.39 <br />
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!-- Column -2- : END -->
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 2 Columns : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="10"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- 1 Column -Text and Button- : BEGIN -->
+          <tr>
+            <td style="background-color: #000000">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+              >
+                <!-- Spacer : BEGIN -->
+                <tr>
+                  <td
+                    aria-hidden="true"
+                    height="45"
+                    style="font-size: 0; line-height: 0px"
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+                <!-- Spacer : END -->
+                <tr>
+                  <td
+                    style="
+                      padding: 0 20px;
+                      font-family: sans-serif;
+                      font-size: 12px;
+                      line-height: 30px;
+                      letter-spacing: 0.75px;
+                      color: #ffffff;
+                      text-align: center;
+                      font-weight: 600;
+                    "
+                  >
+                    <p style="margin: 0 25px">
+                      TO STAY UP TO DATE ON THE LATEST SHINOLA NEWS AND PRODUCT
+                      LAUNCHES, SIGN UP FOR OUR NEWSLETTER
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    aria-hidden="true"
+                    height="35"
+                    style="font-size: 0; line-height: 0px"
+                  >
+                    &nbsp;
                   </td>
                 </tr>
                 <tr>
@@ -379,97 +1006,231 @@
                       <tr>
                         <td
                           class="button-td button-td-primary"
-                          style="border-radius: 4px; background: #222222"
+                          style="border-radius: 4px; background: #000000"
                         >
                           <a
                             class="button-a button-a-primary"
                             href="https://google.com/"
                             style="
-                              background: #222222;
+                              background: #ffffff;
                               border: 1px solid #000000;
                               font-family: sans-serif;
-                              font-size: 15px;
+                              font-size: 13px;
                               line-height: 15px;
                               text-decoration: none;
-                              padding: 13px 17px;
-                              color: #ffffff;
+                              padding: 17px 21px;
+                              color: #000000;
                               display: block;
                               border-radius: 4px;
+                              font-weight: 600;
                             "
-                            >Primary Button</a
+                            >SIGN UP NOW</a
                           >
                         </td>
                       </tr>
+                      <!-- Spacer : BEGIN -->
+                      <tr>
+                        <td
+                          aria-hidden="true"
+                          height="50"
+                          style="font-size: 0; line-height: 0px"
+                        >
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <!-- Spacer : END -->
                     </table>
                     <!-- Button : END -->
                   </td>
                 </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 1 Column -Text and Button- : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="40"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- 1 Column -Images- : BEGIN -->
+          <tr>
+            <td style="background-color: #ffffff">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="max-width: 200px"
+              >
                 <tr>
                   <td
                     style="
-                      padding: 20px;
                       font-family: sans-serif;
-                      font-size: 15px;
-                      line-height: 20px;
-                      color: #555555;
+                      font-size: 12px;
+                      text-align: center;
                     "
                   >
-                    <h2
-                      style="
-                        margin: 0 0 10px 0;
-                        font-family: sans-serif;
-                        font-size: 18px;
-                        line-height: 22px;
-                        color: #333333;
-                        font-weight: bold;
-                      "
-                    >
-                      Praesent in felis ut velit pretium lobortis rhoncus
-                      ut&nbsp;erat.
-                    </h2>
-                    <ul
-                      style="
-                        padding: 0;
-                        margin: 0 0 10px 0;
-                        list-style-type: disc;
-                      "
-                    >
-                      <li style="margin: 0 0 10px 30px" class="list-item-first">
-                        A list item.
-                      </li>
-                      <li style="margin: 0 0 10px 30px">
-                        Another list item here.
-                      </li>
-                      <li style="margin: 0 0 0 30px" class="list-item-last">
-                        Everyone gets a list item, list items for everyone!
-                      </li>
-                    </ul>
-                    <p style="margin: 0">
-                      Maecenas sed ante pellentesque, posuere leo id, eleifend
-                      dolor. Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra, per inceptos himenaeos. Praesent laoreet
-                      malesuada cursus. Maecenas scelerisque congue eros eu
-                      posuere. Praesent in felis ut velit pretium lobortis
-                      rhoncus ut&nbsp;erat.
+                    <a href="#">
+                      <img
+                        src="https://res.cloudinary.com/endersgame/image/upload/v1671211177/shinola/facebook_e0hw9j.png"
+                        width="32"
+                        height="32"
+                        alt="facebook logo"
+                        border="0"
+                      />
+                    </a>
+                  </td>
+                  <td
+                    style="
+                      font-family: sans-serif;
+                      font-size: 12px;
+                      text-align: center;
+                    "
+                  >
+                    <a href="#">
+                      <img
+                        src="https://res.cloudinary.com/endersgame/image/upload/v1671211178/shinola/twitter_z9wopj.png"
+                        width="32"
+                        height="32"
+                        alt="twitter logo"
+                        border="0"
+                      />
+                    </a>
+                  </td>
+                  <td
+                    style="
+                      font-family: sans-serif;
+                      font-size: 12px;
+                      text-align: center;
+                    "
+                  >
+                    <a href="#">
+                      <img
+                        src="https://res.cloudinary.com/endersgame/image/upload/v1671211177/shinola/instagram_fpplwb.png"
+                        width="32"
+                        height="32"
+                        alt="instagram logo"
+                        border="0"
+                      />
+                    </a>
+                  </td>
+                  <td
+                    style="
+                      font-family: sans-serif;
+                      font-size: 12px;
+                      text-align: center;
+                    "
+                  >
+                    <a href="#">
+                      <img
+                        src="https://res.cloudinary.com/endersgame/image/upload/v1671211177/shinola/pinterest_ndgcxc.png"
+                        width="32"
+                        height="32"
+                        alt="pinterest logo"
+                        border="0"
+                      />
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 1 Column -Images- : END -->
+
+          <!-- Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="10"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- 1 Column -Image and Text- : BEGIN -->
+          <tr>
+            <td style="background-color: #ffffff">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                  max-width: 200px;
+                  font-family: sans-serif;
+                  font-size: 15px;
+                "
+              >
+                <tr>
+                  <td
+                    style="
+                      font-family: sans-serif;
+                      font-size: 12px;
+                      text-align: center;
+                    "
+                  >
+                    <a href="#">
+                      <img
+                        src="https://res.cloudinary.com/endersgame/image/upload/v1671211177/shinola/bolt_hcbtua.jpg"
+                        width="120"
+                        height="10"
+                        alt="lighting bolt"
+                        border="0"
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="text-align: center; margin: 0">
+                      <a href="#" style="color: #000000; font-weight: 600"
+                        >SHINOLA.COM</a
+                      >
                     </p>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
-          <!-- 1 Column Text + Button : END -->
+          <!-- 1 Column -Image and Text- : END -->
 
-          <!-- 2 Even Columns : BEGIN -->
+          <!-- Spacer : BEGIN -->
           <tr>
-            <td style="padding: 0 10px 40px 10px; background-color: #ffffff">
+            <td
+              aria-hidden="true"
+              height="30"
+              style="font-size: 0; line-height: 0px"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Spacer : END -->
+
+          <!-- 2 Columns : BEGIN -->
+          <tr>
+            <td>
               <table
                 role="presentation"
                 border="0"
                 cellpadding="0"
                 cellspacing="0"
                 width="100%"
+                style="font-size: 13px; max-width: 450px"
               >
                 <tr>
+                  <!-- Column -1- : BEGIN -->
                   <td valign="top" width="50%">
                     <table
                       role="presentation"
@@ -479,44 +1240,21 @@
                       width="100%"
                     >
                       <tr>
-                        <td style="text-align: center; padding: 0 10px">
-                          <img
-                            src="https://via.placeholder.com/200"
-                            width="200"
-                            height=""
-                            alt="alt_text"
-                            border="0"
-                            style="
-                              width: 100%;
-                              max-width: 200px;
-                              background: #dddddd;
-                              font-family: sans-serif;
-                              font-size: 15px;
-                              line-height: 15px;
-                              color: #555555;
-                            "
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          style="
-                            text-align: left;
-                            font-family: sans-serif;
-                            font-size: 15px;
-                            line-height: 20px;
-                            color: #555555;
-                            padding: 10px 10px 0;
-                          "
-                        >
+                        <td style="text-align: left">
                           <p style="margin: 0">
-                            Maecenas sed ante pellentesque, posuere leo id,
-                            eleifend dolor.
+                            <a
+                              href="#"
+                              style="text-decoration: underline; color: #000000"
+                              >FIND&nbsp;YOUR&nbsp;NEAREST&nbsp;STORE</a
+                            >
                           </p>
                         </td>
                       </tr>
                     </table>
                   </td>
+                  <!-- Column -1- : END -->
+
+                  <!-- Column -2- : BEGIN -->
                   <td valign="top" width="50%">
                     <table
                       role="presentation"
@@ -526,63 +1264,38 @@
                       width="100%"
                     >
                       <tr>
-                        <td style="text-align: center; padding: 0 10px">
-                          <img
-                            src="https://via.placeholder.com/200"
-                            width="200"
-                            height=""
-                            alt="alt_text"
-                            border="0"
-                            style="
-                              width: 100%;
-                              max-width: 200px;
-                              background: #dddddd;
-                              font-family: sans-serif;
-                              font-size: 15px;
-                              line-height: 15px;
-                              color: #555555;
-                            "
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          style="
-                            text-align: left;
-                            font-family: sans-serif;
-                            font-size: 15px;
-                            line-height: 20px;
-                            color: #555555;
-                            padding: 10px 10px 0;
-                          "
-                        >
+                        <td style="text-align: right">
                           <p style="margin: 0">
-                            Maecenas sed ante pellentesque, posuere leo id,
-                            eleifend dolor.
+                            <a
+                              href="#"
+                              style="text-decoration: underline; color: #000000"
+                              >CORPORATE&nbsp;GIFTING</a
+                            >
                           </p>
                         </td>
                       </tr>
                     </table>
                   </td>
+                  <!-- Column -2- : END -->
                 </tr>
               </table>
             </td>
           </tr>
-          <!-- 2 Even Columns : END -->
+          <!-- 2 Columns : END -->
 
-          <!-- Clear Spacer : BEGIN -->
+          <!-- Spacer : BEGIN -->
           <tr>
             <td
               aria-hidden="true"
-              height="40"
-              style="font-size: 0px; line-height: 0px"
+              height="20"
+              style="font-size: 0; line-height: 0px"
             >
               &nbsp;
             </td>
           </tr>
-          <!-- Clear Spacer : END -->
+          <!-- Spacer : END -->
 
-          <!-- 1 Column Text : BEGIN -->
+          <!-- 1 Column -Text- : BEGIN -->
           <tr>
             <td style="background-color: #ffffff">
               <table
@@ -595,72 +1308,38 @@
                 <tr>
                   <td
                     style="
-                      padding: 20px;
                       font-family: sans-serif;
-                      font-size: 15px;
-                      line-height: 20px;
+                      font-size: 11px;
+                      line-height: 1.5;
                       color: #555555;
+                      text-align: center;
                     "
                   >
                     <p style="margin: 0">
-                      Maecenas sed ante pellentesque, posuere leo id, eleifend
-                      dolor. Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra, per inceptos himenaeos. Praesent laoreet
-                      malesuada cursus. Maecenas scelerisque congue eros eu
-                      posuere. Praesent in felis ut velit pretium lobortis
-                      rhoncus ut&nbsp;erat.
+                      This email was sent to xxx@xxx.xxx by: Shinola Detroit
+                      <br />
+                      485 W. Milwaukee St., Detroit, MI 48202 US
                     </p>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
-          <!-- 1 Column Text : END -->
-        </table>
-        <!-- Email Body : END -->
+          <!-- 1 Column -Text- : END -->
 
-        <!-- Email Footer : BEGIN -->
-        <table
-          align="center"
-          role="presentation"
-          cellspacing="0"
-          cellpadding="0"
-          border="0"
-          width="100%"
-          style="margin: auto"
-        >
+          <!-- Spacer : BEGIN -->
           <tr>
             <td
-              style="
-                padding: 20px;
-                font-family: sans-serif;
-                font-size: 12px;
-                line-height: 15px;
-                text-align: center;
-                color: #ffffff;
-              "
+              aria-hidden="true"
+              height="30"
+              style="font-size: 0; line-height: 0px"
             >
-              <webversion
-                style="
-                  color: #ffffff;
-                  text-decoration: underline;
-                  font-weight: bold;
-                "
-                >View as a Web Page</webversion
-              >
-              <br /><br />
-              Company Name<br /><span class="unstyle-auto-detected-links"
-                >123 Fake Street, SpringField, OR, 97477 US<br />(123)
-                456-7890</span
-              >
-              <br /><br />
-              <unsubscribe style="color: #ffffff; text-decoration: underline"
-                >unsubscribe</unsubscribe
-              >
+              &nbsp;
             </td>
           </tr>
+          <!-- Spacer : END -->
         </table>
-        <!-- Email Footer : END -->
+        <!-- Email Body : END -->
 
         <!--[if mso]>
             </td>
@@ -668,67 +1347,6 @@
             </table>
             <![endif]-->
       </div>
-
-      <!-- Full Bleed Background Section : BEGIN -->
-      <table
-        role="presentation"
-        cellspacing="0"
-        cellpadding="0"
-        border="0"
-        width="100%"
-        style="background-color: #709f2b"
-      >
-        <tr>
-          <td>
-            <div
-              align="center"
-              style="max-width: 600px; margin: auto"
-              class="email-container"
-            >
-              <!--[if mso]>
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
-                        <tr>
-                        <td>
-                        <![endif]-->
-              <table
-                role="presentation"
-                cellspacing="0"
-                cellpadding="0"
-                border="0"
-                width="100%"
-              >
-                <tr>
-                  <td
-                    style="
-                      padding: 20px;
-                      text-align: left;
-                      font-family: sans-serif;
-                      font-size: 15px;
-                      line-height: 20px;
-                      color: #ffffff;
-                    "
-                  >
-                    <p style="margin: 0">
-                      Maecenas sed ante pellentesque, posuere leo id, eleifend
-                      dolor. Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra, per inceptos himenaeos. Praesent laoreet
-                      malesuada cursus. Maecenas scelerisque congue eros eu
-                      posuere. Praesent in felis ut velit pretium lobortis
-                      rhoncus ut&nbsp;erat.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              <!--[if mso]>
-                        </td>
-                        </tr>
-                        </table>
-                        <![endif]-->
-            </div>
-          </td>
-        </tr>
-      </table>
-      <!-- Full Bleed Background Section : END -->
 
       <!--[if mso | IE]>
     </td>
